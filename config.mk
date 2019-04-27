@@ -61,6 +61,7 @@ CSRCS = \
        lcd.c \
        led.c \
        scope.c \
+       nyan.c \
        spi_master.c \
        gfx.c \
        i2c.c \
@@ -73,6 +74,7 @@ CSRCS = \
        common/services/usb/class/cdc/device/udi_cdc.c     \
        common/services/usb/class/cdc/device/udi_cdc_desc.c \
        common/services/usb/udc/udc.c                      \
+       common/services/delay/sam/cycle_counter.c          \
        sam/drivers/pdc/pdc.c                              \
        sam/drivers/pio/pio.c                              \
        sam/drivers/pmc/pmc.c                              \

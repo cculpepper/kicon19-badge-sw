@@ -27,5 +27,6 @@ void app_scope_func(void);
 void app_command_func(void);
 void app_uart_func(void);
 void app_name_func(void);
+void app_nyan_func(void);
 
 #endif /* APPS_LIST_H */

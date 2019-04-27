@@ -159,6 +159,8 @@ menu_list_t menu_uart = {
     }
 };
 
+application_t app_nyan = { "Nyan Cat", app_nyan_func };
+
 menu_list_t main_menu = {
     "Main menu", 0,
     {
@@ -168,6 +170,7 @@ menu_list_t main_menu = {
        { APP,       { .app     = &app_command } },
        { APP,       { .app     = &app_name} },
        { SUBMENU,   { .submenu = &menu_uart } },
+       { APP,       { .app     = &app_nyan } },
        { END,       { NULL } }
     }
 };
