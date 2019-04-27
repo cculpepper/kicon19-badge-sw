@@ -4,8 +4,8 @@ img = Image.new('1', (128, 64))
  
 fnt = ImageFont.truetype('Comic_Sans_MS.ttf', 15)
 d = ImageDraw.Draw(img)
-d.text((5,5), "Brendan", font=fnt, fill=1)
-d.text((6,20), "Rathbone-Desch", font=fnt, fill=1)
+d.text((5,5), "first-ish ", font=fnt, fill=1)
+d.text((6,20), "Second line", font=fnt, fill=1)
  
 pixels = list(img.getdata())
 width, height = img.size
