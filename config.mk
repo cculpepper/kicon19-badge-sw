@@ -67,6 +67,7 @@ CSRCS = \
        io_conf.c \
        serial.c \
        menu.c \
+       name.c \
        menu_struct.c \
        common/services/clock/sam4s/sysclk.c               \
        common/services/usb/class/cdc/device/udi_cdc.c     \

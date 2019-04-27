@@ -135,6 +135,7 @@ menu_list_t menu_scope = {
 
 
 application_t app_command = { "Command interface", app_command_func };
+application_t app_name = { "Name", app_name_func };
 
 
 application_t app_uart = { "RUN", app_uart_func };
@@ -165,6 +166,7 @@ menu_list_t main_menu = {
        { SUBMENU,   { .submenu = &menu_la_lcd } },
        { SUBMENU,   { .submenu = &menu_scope } },
        { APP,       { .app     = &app_command } },
+       { APP,       { .app     = &app_name} },
        { SUBMENU,   { .submenu = &menu_uart } },
        { END,       { NULL } }
     }

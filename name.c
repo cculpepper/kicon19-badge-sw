@@ -17,15 +17,27 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef APPS_LIST_H
-#define APPS_LIST_H
+#include "name.h"
+#include "namePixels.h"
 
-// Applications
-void app_la_usb_func(void);
-void app_la_lcd_func(void);
-void app_scope_func(void);
-void app_command_func(void);
-void app_uart_func(void);
-void app_name_func(void);
+#include "apps_list.h"
+#include "buttons.h"
+#include "udi_cdc.h"
+#include "lcd.h"
 
-#endif /* APPS_LIST_H */
+#include <stddef.h>
+#include <string.h>
+
+void app_name_func(void)
+{
+                                               
+    while(SSD1306_isBusy());                                                       
+    SSD1306_clearBufferFull();
+    for(int i = 0; i<(numPixels); i++)
+    {
+	    SSD1306_setPixel(namePixels[i][1], namePixels[i][0], 1);
+    }
+    SSD1306_drawBufferDMA();       
+
+    while(btn_state() != BUT_LEFT);
+}

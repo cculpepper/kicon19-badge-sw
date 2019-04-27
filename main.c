@@ -30,6 +30,7 @@
 #include "SSD1306_commands.h"
 #include "scope.h"
 #include "serial.h"
+#include "name.h"
 #include "menu.h"
 #include "led.h"
 #include "buffer.h"

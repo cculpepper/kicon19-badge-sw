@@ -1,3 +1,7 @@
+I made the badge print my name in Comic Sans! 
+
+It is hella hacky. Theres a script in image-Gen that generate the namePixels file. 
+You need to edit the name.py, and pipe the output into namePixels.h. 
 # Official [KiCon 2019](https://kicad-kicon.com/) badge (firmware)
 
 _(hardware design is in another [repository](https://github.com/orsonmmz/kicon19-badge-hw))_

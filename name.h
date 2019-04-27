@@ -17,15 +17,23 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef APPS_LIST_H
-#define APPS_LIST_H
+/**
+ * Multiprotocol commands use the following format:
+ *
+ * offset | description
+ * -------+------------
+ *      1 | command length (when 1 <= length <= 255) or reset request (when 0)
+ *      2 | command type (see cmd_type_t)                      \__ payload
+ *  3-255 | actual command data, specific to the command type  /
+ *    n+1 | crc (all payload bytes xored together)
+ *
+ * In order to reset the command buffer to a known state, keep sending 0x00
+ * until CMD_RESET_ACK is received.
+ */
 
-// Applications
-void app_la_usb_func(void);
-void app_la_lcd_func(void);
-void app_scope_func(void);
-void app_command_func(void);
-void app_uart_func(void);
-void app_name_func(void);
+#ifndef NAME_H
+#define NAME_H
 
-#endif /* APPS_LIST_H */
+#include <stdint.h>
+
+#endif /* COMMANDS_H */
